@@ -1,0 +1,12 @@
+{
+  "name": "digitalself-desktop",
+  "version": "0.1.0",
+  "description": "Desktop wrapper for DigitalSelf",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^29.0.0"
+  }
+}

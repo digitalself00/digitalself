@@ -1,0 +1,3 @@
+"""
+Python Enums / status types
+"""
