@@ -23,7 +23,7 @@ function createWindow() {
     },
   });
 
-  const devUrl = 'http://localhost:5173';
+  const devUrl = 'http://localhost:8000';
   const prodPath = path.join(__dirname, '../src/fe-react/dist/index.html');
 
   if (isDev) {
