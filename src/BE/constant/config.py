@@ -37,7 +37,11 @@ class Settings:
     ACCESS_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 1440))
 
     # CORS
-    FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:5173")
+    FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:8000")
+
+    # Speech to Task / Voice AI
+    OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
+    SPEECH_TO_TASK_URL: str = os.getenv("SPEECH_TO_TASK_URL", "")
 
 
 settings = Settings()

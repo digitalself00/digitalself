@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { openCreateTaskModal, showToast } from '../../Redux/slices/uiSlice';
+import { openCreateTaskModal } from '../../Redux/slices/uiSlice';
 
 export default function DualActionBar() {
   const dispatch = useDispatch();
 
   const handleVoiceClick = () => {
-    dispatch(showToast('Voice AI orchestration is coming in Phase 2! Please use "+ Form" to create tasks.'));
+    dispatch(openCreateTaskModal('voice'));
   };
 
   const handleFormClick = () => {
@@ -24,8 +24,8 @@ export default function DualActionBar() {
       >
         <span className="material-symbols-outlined text-[20px] text-primary">mic</span>
         <span className="font-semibold text-title-md text-primary">Voice</span>
-        <span className="absolute -top-1.5 -right-1 px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">
-          Soon
+        <span className="absolute -top-1.5 -right-1 px-1.5 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold">
+          AI 2.0
         </span>
       </button>
 

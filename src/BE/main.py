@@ -10,6 +10,7 @@ from src.BE.db.init_db import init_db
 from src.BE.exceptions.custom_exceptions import AppException
 from src.BE.resource.auth import router as auth_router
 from src.BE.resource.task import router as task_router
+from src.BE.resource.ai import router as ai_router
 
 # Path to the frontend build artifacts
 FRONTEND_DIST_DIR = Path(__file__).resolve().parent.parent / "fe-react" / "dist"
@@ -75,6 +76,7 @@ async def generic_exception_handler(request: Request, exc: Exception):
 # Register API Routers
 app.include_router(auth_router)
 app.include_router(task_router)
+app.include_router(ai_router)
 
 
 # Mount static frontend assets if built
